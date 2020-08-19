@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-cpt",
+  "version": "1.0.0",
+  "description": "List all my projects from the start",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "Rehan Lodhi",
+  "license": "GPL-2+"
+}
