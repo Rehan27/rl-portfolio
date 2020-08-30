@@ -8,5 +8,11 @@
     "build": "wp-scripts build"
   },
   "author": "Rehan Lodhi",
-  "license": "GPL-2+"
+  "license": "GPL-2+",
+  "dependencies": {
+    "@wordpress/components": "^10.0.6"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.1"
+  }
 }

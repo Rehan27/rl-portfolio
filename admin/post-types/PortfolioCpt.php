@@ -26,7 +26,7 @@ class PortfolioCpt
             'rewrite' => array('slug' => $this->singular_name),
             'menu_icon' => 'dashicons-text-page ',
             'show_in_rest' => true,
-            'supports' => array('thumbnail', 'editor', 'title'),
+            'supports' => array('thumbnail', 'editor', 'title', 'custom-fields'),
         );
 
         register_post_type('rl_' . $this->singular_name, $args);

@@ -30,7 +30,7 @@ function sidebar_plugin_register() {
     wp_register_script(
         'index-plugin-js',
         plugins_url('build/index.js', __FILE__),
-        array('wp-plugins', 'wp-edit-post', 'wp-element')
+        array('wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data')
     );
 }
 

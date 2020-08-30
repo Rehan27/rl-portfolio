@@ -100,18 +100,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var registerPlugin = wp.plugins.registerPlugin;
 var PluginDocumentSettingPanel = wp.editPost.PluginDocumentSettingPanel;
+var useSelect = wp.data.useSelect;
 
-var PluginDocumentSettingPanelDemo = function PluginDocumentSettingPanelDemo() {
+var PluginDocumentSettingPanelGallery = function PluginDocumentSettingPanelGallery() {
+  var postType = useSelect(function (select) {
+    return select('core/editor').getCurrentPostType();
+  });
+
+  if ('rl_project' !== postType) {
+    return null;
+  }
+
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PluginDocumentSettingPanel, {
-    name: "custom-panel",
-    title: "Custom Panel",
-    className: "custom-panel"
-  }, "Custom Panel Contents");
+    name: "project-gallery",
+    title: "Gallery",
+    className: "gallery-panel"
+  });
 };
 
-registerPlugin('plugin-document-setting-panel-demo', {
-  render: PluginDocumentSettingPanelDemo,
-  icon: 'palmtree'
+registerPlugin('plugin-document-setting-panel-gallery', {
+  render: PluginDocumentSettingPanelGallery,
+  icon: null
 });
 
 /***/ }),
